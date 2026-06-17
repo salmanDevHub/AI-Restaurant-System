@@ -7,53 +7,112 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🔥 Shajahan Tandoori Grills
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+An AI-powered restaurant ordering system built with Laravel 12, featuring authentic Multan cuisine, smart food recommendations, and a complete order management workflow.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**🌐 Live Demo:** [ai-restaurant-system-production.up.railway.app](https://ai-restaurant-system-production.up.railway.app)
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 📖 About
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Shajahan Tandoori Grills is a full-stack restaurant web application that lets customers browse a curated menu, get AI-assisted food suggestions, place orders, and track them in real time. Admins get a dedicated dashboard to manage food items, categories, orders, and users.
 
-## Laravel Sponsors
+## ✨ Features
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- **User Authentication** — secure registration and login for customers, with a separate admin login flow
+- **Dynamic Menu** — browse dishes by category, with pricing, discounts, and effective-price calculations
+- **AI Food Assistant** — an integrated AI agent that helps users discover dishes based on their preferences
+- **Shopping Cart & Checkout** — add items to cart, review the order, and check out smoothly
+- **Order Tracking** — customers can follow their order status from placement to delivery
+- **Admin Dashboard** — manage foods, categories, orders, and users from one place
+- **User Profile** — manage personal details and notification preferences
+- **Responsive Design** — built with Tailwind CSS for a clean experience across devices
 
-### Premium Partners
+## 🛠️ Tech Stack
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+| Layer | Technology |
+|---|---|
+| Backend | Laravel 12 (PHP 8.2+) |
+| Frontend | Blade Templates, Tailwind CSS |
+| Database | MySQL (production)  |
+| Hosting | Railway |
+| AI Integration | Anthropic API |
 
-## Contributing
+## 🚀 Getting Started
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Prerequisites
 
-## Code of Conduct
+- PHP 8.2 or higher
+- Composer
+- Node.js & npm
+- MySQL 
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Installation
 
-## Security Vulnerabilities
+```bash
+# Clone the repository
+git clone https://github.com/salmanDevHub/AI-Restaurant-System.git
+cd AI-Restaurant-System
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# Install PHP dependencies
+composer install
 
-## License
+# Install JS dependencies
+npm install
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Set up environment file
+cp .env.example .env
+php artisan key:generate
+
+# Run migrations
+php artisan migrate
+
+# Build frontend assets
+npm run build
+
+# Start the development server
+php artisan serve
+```
+
+Visit `http://localhost:8000` in your browser.
+
+### Demo Accounts
+
+| Role | Email | Password |
+|---|---|---|
+| Demo User | user@shahjan.com | user123 |
+| Admin | admin@shahjan.com | admin123 |
+
+## 📁 Project Structure
+
+```
+app/
+├── Http/Controllers/
+│   ├── Admin/         # Admin panel controllers
+│   ├── User/           
+│   └── AIAgentController.php
+├── Models/             
+└── Services/
+    └── AIAgentService.php
+
+resources/views/
+├── admin/               # Admin dashboard views
+├── auth/                # Login & registration
+└── user/                # Menu, cart, orders, profile
+```
+
+## 🌍 Deployment
+
+This project is deployed on [Railway](https://railway.app) with a MySQL database. The live version is available at:
+
+👉 **[https://ai-restaurant-system-production.up.railway.app](ai-restaurant-system.up.railway.app)**
+
+
+## 👤 Author
+
+**Salman**
+GitHub: [@salmanDevHub](https://github.com/salmanDevHub)
