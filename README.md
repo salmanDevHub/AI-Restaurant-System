@@ -13,7 +13,7 @@
 
 An AI-powered restaurant ordering system built with Laravel 12, featuring authentic Multan cuisine, smart food recommendations, and a complete order management workflow.
 
-**🌐 Live Demo:** [ai-restaurant-system-production.up.railway.app](https://ai-restaurant-system-production.up.railway.app)
+**🌐 Live Demo:** [ai-restaurant-system.up.railway.app](https://ai-restaurant-system.up.railway.app)
 
 ---
 
@@ -109,7 +109,7 @@ resources/views/
 
 This project is deployed on [Railway](https://railway.app) with a MySQL database. The live version is available at:
 
-👉 **[https://ai-restaurant-system-production.up.railway.app](ai-restaurant-system.up.railway.app)**
+👉 **[https://ai-restaurant-system.up.railway.app](ai-restaurant-system.up.railway.app)**
 
 
 ## 👤 Author
