@@ -143,7 +143,7 @@
     <i class="fas fa-key"></i> Your OTP: <span style="font-size:1.1rem;letter-spacing:2px;">{{ session('dev_otp') }}</span>
 </div>
 @endif
-        </p>
+
 
         @if($errors->any())
         <div class="alert alert-error"><i class="fas fa-exclamation-circle"></i> {{ $errors->first() }}</div>
