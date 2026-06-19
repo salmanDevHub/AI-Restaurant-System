@@ -134,9 +134,15 @@
         <span class="otp-icon">📱</span>
         <h1>Verify Your Phone</h1>
         <p class="otp-desc">
-            We've sent a 6-digit OTP to
-            <strong>{{ Auth::user()->phone ?? '+92 XXX XXXXXXX' }}</strong>
-            <span style="font-size:0.78rem;color:#B0A898;">(Check logs in dev mode)</span>
+    We've sent a 6-digit OTP to
+    <strong>{{ Auth::user()->phone ?? '+92 XXX XXXXXXX' }}</strong>
+</p>
+
+@if(session('dev_otp'))
+<div class="alert" style="background:#FFF8EE;color:#7A5200;border:1.5px solid #F5D490;font-weight:700;">
+    <i class="fas fa-key"></i> Your OTP: <span style="font-size:1.1rem;letter-spacing:2px;">{{ session('dev_otp') }}</span>
+</div>
+@endif
         </p>
 
         @if($errors->any())

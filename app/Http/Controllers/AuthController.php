@@ -138,18 +138,19 @@ class AuthController extends Controller {
         return back()->with('success', 'New OTP sent to your phone.');
     }
 
-    private function sendPhoneOtp(User $user): void {
-        $otp = str_pad(random_int(0, 999999), 6, '0', STR_PAD_LEFT);
-        $user->update([
-            'phone_otp' => $otp,
-            'phone_otp_expires_at' => now()->addMinutes(10),
-        ]);
+ private function sendPhoneOtp(User $user): void {
+    $otp = str_pad(random_int(0, 999999), 6, '0', STR_PAD_LEFT);
+    $user->update([
+        'phone_otp' => $otp,
+        'phone_otp_expires_at' => now()->addMinutes(10),
+    ]);
 
-        // TODO: Send via Twilio SMS
-        // For development, log OTP
-        \Log::info("OTP for {$user->phone}: {$otp}");
-    }
+    // TODO: Send via Twilio SMS
+    \Log::info("OTP for {$user->phone}: {$otp}");
 
+    // DEV MODE: show OTP on screen (remove before final production)
+    session(['dev_otp' => $otp]);
+}
 
     public function showAdminRegister() {
         return view('auth.admin-register');
